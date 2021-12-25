@@ -1,15 +1,25 @@
-# Nomrmalizacao_de_dadosExec
+# Normalizacao_de_dadosExec
 Exercícios Propostos
 
-Tabela TIPOA
+Tabela TIPO <br>
+INSERT INTO `normalizacao_dados`.`tipo` (`CODIGO_TIP`, `TIPO_NOME`) VALUES ('1', 'Banco de Dados');       <br>
+INSERT INTO `normalizacao_dados`.`tipo` (`CODIGO_TIP`, `TIPO_NOME`) VALUES ('2', 'Programação');          <br>
+INSERT INTO `normalizacao_dados`.`tipo` (`CODIGO_TIP`, `TIPO_NOME`) VALUES ('3', 'Modelagem de dados');   <br>
 
 ![image](https://user-images.githubusercontent.com/69328711/147393224-c99d8282-c745-4d44-99ef-0d4e967d9c7e.png)
 
+
+
 A tabela TIPO foi criada separadamente pois um mesmo tipo de curso poderá ser utilizado em dezenas de cursos. Para poupar recursos de armazenamento na tabela CURSO – pois armazenar um número (campo CODIGO) ocupa menos espaço do que armazenar textos (campo TIPO) - e também para disponibilizar os tipos de cursos sem depender do cadastro de outros cursos, esta informação deve ser gerenciada por esta tabela.
 
-Tabela INSTRUTOR
+Tabela INSTRUTOR <br>
+INSERT INTO `normalizacao_dados`.`instrutor` (`NOME_INSTRUTOR`, `TELEFONE`) VALUES ('André Milani', '1111-1111'); <br>
+INSERT INTO `normalizacao_dados`.`instrutor` (`NOME_INSTRUTOR`, `TELEFONE`) VALUES ('Carlos Tosin', '1212-1212'); <br>
 
+SELECT * FROM normalizacao_dados.tipo; <br>
 ![image](https://user-images.githubusercontent.com/69328711/147393236-5e7d44b4-6b82-425c-a782-9c11c35f52ea.png)
+
+
 
 A tabela INSTRUTOR foi criada separadamente dos cursos pois um mesmo instrutor pode ser o responsável por um ou mais cursos disponibilizados pela Softblue. Para não haver redundância de dados, gerar economia de espaço de armazenamento e facilidade de manutenção (alteração de dados do instrutor), estas informações devem ser gerenciadas por esta tabela.
 
