@@ -1,5 +1,4 @@
 # Normalizacao_de_dadosExec
-Exercícios Propostos
 
 <h3> Tabela TIPO </h3> <br>
 INSERT INTO `normalizacao_dados`.`tipo` (`CODIGO_TIP`, `TIPO_NOME`) VALUES ('1', 'Banco de Dados');       <br>
